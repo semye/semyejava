@@ -3,7 +3,7 @@ println "gradle>" + gradle  //build
 
 
 gradle.projectsEvaluated {
-    println "projectsEvaluated"
+    println "=====>projectsEvaluated"
 }
 gradle.settingsEvaluated {
     println "settingsEvaluated"
@@ -29,7 +29,6 @@ gradle.projectsLoaded {
     println "当前子项目:" + gradle.rootProject.childProjects.size()
 }
 //includeFlat()
-
 
 
 //buildCache {
