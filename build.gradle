@@ -13,7 +13,6 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'
     }
@@ -30,7 +29,6 @@ allprojects {
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
-
 
 
 println rootProject //root project 'SemyeGradle'
@@ -50,7 +48,6 @@ ext {
 println rootProject //root project 'SemyeGradle'
 println gradle  //build 'SemyeGradle'
 println project //project ':subjava'
-
 
 
 dependencies {
