@@ -7,6 +7,13 @@ import com.semye.base.kotlin.delegate.PlayerDelegate
 var v1 = 1
 val v2 = 2
 
+class abc {
+    val a: String by lazy {
+        "123"
+    }
+}
+
+
 //Scope Functions  作用域函数
 /**
  * Kotlin标准库包含几个函数，它们的唯一目的是在对象的上下文中执行代码块。
