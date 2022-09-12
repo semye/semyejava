@@ -21,9 +21,9 @@ public class Producer implements Runnable {
     /**
      * 内存缓冲区
      */
-    private BlockingQueue<String> queue;
+    private final BlockingQueue<String> queue;
 
-    private static AtomicInteger count = new AtomicInteger(); //总数  原子操作
+    private static final AtomicInteger count = new AtomicInteger(); //总数  原子操作
 
     private static final int SLEEP_TIME = 1000;
 
@@ -42,6 +42,8 @@ public class Producer implements Runnable {
                 Thread.sleep(random.nextInt(SLEEP_TIME));
                 if (!queue.offer(a, 2, TimeUnit.SECONDS)) {
                     System.out.println("加入队列失败");
+                }else{
+                    System.out.println(this+"加入队列成功"+a+":"+queue.size());
                 }
             }
         } catch (Exception e) {

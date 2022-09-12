@@ -22,11 +22,11 @@ public class Main {
         Consumer consumer3 = new Consumer(blockingQueue);
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(producer1);
-        executorService.execute(producer2);
-        executorService.execute(producer3);
+//        executorService.execute(producer2);
+//        executorService.execute(producer3);
         executorService.execute(consumer1);
-        executorService.execute(consumer2);
-        executorService.execute(consumer3);
+//        executorService.execute(consumer2);
+//        executorService.execute(consumer3);
 
         Thread.sleep(10 * 1000);
 
