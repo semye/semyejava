@@ -36,6 +36,7 @@ public class Main {
         Thread.sleep(3000);
         executorService.shutdown();
         System.out.println("执行完毕");
+        System.exit(0);
     }
 
 }
