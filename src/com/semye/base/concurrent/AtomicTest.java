@@ -21,6 +21,7 @@ public class AtomicTest {
         IntStream.range(1, 100).forEach(new IntConsumer() {
             @Override
             public void accept(int value) {
+                System.out.println("execute：" + value);
                 executorService.execute(new Runnable() {
                     @Override
                     public void run() {
@@ -32,6 +33,6 @@ public class AtomicTest {
         });
         executorService.shutdown();
         // 线程执行完毕后再查看变量值
-        System.out.println(atomicInteger.get());
+        System.out.println("result：" + atomicInteger.get());
     }
 }
