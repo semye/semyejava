@@ -4,3 +4,4 @@ build
 subjava/dest
 .idea
 *.iml
+out

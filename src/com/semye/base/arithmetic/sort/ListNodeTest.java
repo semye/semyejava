@@ -1,6 +1,4 @@
-package com.semye.base.sort;
-
-import java.util.List;
+package com.semye.base.arithmetic.sort;
 
 /**
  * Created by yesheng on 2021/3/23

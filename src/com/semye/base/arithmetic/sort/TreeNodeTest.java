@@ -1,4 +1,4 @@
-package com.semye.base.sort;
+package com.semye.base.arithmetic.sort;
 
 import java.util.Stack;
 

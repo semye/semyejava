@@ -1,4 +1,4 @@
-package com.semye.base.sort;
+package com.semye.base.arithmetic.sort;
 
 /**
  * Created by yesheng on 2021/3/23
