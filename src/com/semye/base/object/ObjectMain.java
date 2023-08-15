@@ -38,15 +38,25 @@ public class ObjectMain {
 
     private static void testWaitAndNotify() {
         executorService.execute(new Action());
-        //必须获取对象监视器才能调用wait() notify()等方法
-        synchronized (foo) {
+        executorService.execute(() -> {
+            //必须获取对象监视器才能调用wait() notify()等方法
             try {
-                foo.wait();
+                System.out.println("开始等待");
+                synchronized (foo) {
+                    foo.wait();
+                }
                 System.out.println("好的");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        });
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+
         executorService.shutdownNow();
         System.out.println("关闭线程池");
     }
