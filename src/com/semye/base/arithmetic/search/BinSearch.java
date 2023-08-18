@@ -39,7 +39,7 @@ class BinSearch {
 //        return -1;
 //    }
 
-    static int binsearch(int array[], int target) {
+    static int binsearch(int[] array, int target) {
         int left = 0;
         int right = array.length - 1;
         while (left <= right) {
